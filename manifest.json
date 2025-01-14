@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Cf-ide",
+  "version": "1.0",
+  "description": "A Chrome extension to load the Monaco Editor.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://codeforces.com/problemset/problem**","https://codeforces.com/contest/*/problem/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
